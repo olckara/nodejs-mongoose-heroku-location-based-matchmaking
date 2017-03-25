@@ -12,7 +12,6 @@ router.post('/', function (req, res) {
         users.forEach(function (user) {
             userMap[user._id] = user;
         });
-
         res.send(userMap);
     });
 });

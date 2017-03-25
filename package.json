@@ -16,5 +16,8 @@
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.1",
     "mpromise": "^0.5.5"
+  },
+  "engines": {
+    "node":"4.2.6"
   }
 }
