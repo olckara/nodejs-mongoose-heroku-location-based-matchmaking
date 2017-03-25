@@ -21,7 +21,8 @@ UserSchema = mongoose.Schema(
         },
         events : [Number] //id's of events user attended
 
-    });
+    },
+    { collection: 'users' });
 UserSchema.index({ facebook_user_id: 1 }, { unique: true });
 User = mongoose.model('User', UserSchema);
 

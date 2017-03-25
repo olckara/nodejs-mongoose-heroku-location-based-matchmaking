@@ -22,7 +22,8 @@ EventSchema = mongoose.Schema(
         end_time: Date,
         description:String,
         users: [Number]
-    });
+    },
+    { collection: 'events' });
 EventSchema.index({ facebook_event_id: 1 }, { unique: true });
 Event = mongoose.model('Event', EventSchema);
 
