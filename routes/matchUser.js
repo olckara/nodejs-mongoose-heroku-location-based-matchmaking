@@ -32,7 +32,7 @@ router.post('/', function (req, res) {
         },
         {$unwind: "$events"},
         {$project: {_id: 0, title: "$events"}});
-    res.send(result)
+    res.send(JSON.stringify(result))
 });
 
 module.exports = router;
