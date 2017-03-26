@@ -27,9 +27,12 @@ router.post('/', function (req, res) {
                 '$near': [req.body.latitude, req.body.longitude],
                 '$maxDistance': 1000
             }
-        }).toArray(function(error, documents) {
-        if (error) throw error;
-        res.send(documents)});
+        },
+        function (err, users) {
+            var userMap;
+            userMap = users.map(function(user) { return user.facebook_user_id; });
+            res.send(userMap);
+        });
 });
 
 module.exports = router;
