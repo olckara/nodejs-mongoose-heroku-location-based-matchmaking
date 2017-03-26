@@ -18,11 +18,11 @@ router.post('/', function (req, res) {
      res.send(eventMap);
      });*/
     Event.find({}, function (err, events) { //returns all events for demo
-        var eventMap = {};
+        var eventMap = [];
         if ("length" in events) {
             var i = 0;
             events.forEach(function (event) {
-                eventMap[i++] = event;
+                eventMap.push(event);
             });
         }
         res.send(eventMap);

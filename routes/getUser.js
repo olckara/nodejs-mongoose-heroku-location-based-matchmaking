@@ -15,10 +15,10 @@ router.post('/', function (req, res) {
         res.send(userMap);
     });*/
     User.find({}, function (err, users) { //returns all users for demo
-        var userMap = {};
+        var userMap = [];
         var i = 0;
         users.forEach(function (user) {
-            userMap[i++] = user;
+            userMap.push(user);
         });
         res.send(userMap);
     });
