@@ -19,6 +19,8 @@ UserSchema = mongoose.Schema(
             street: String,
             zip: String
         },
+        friends: [Number],
+        friend_requests: [Number],
         events : [Number] //id's of events user attended
 
     },

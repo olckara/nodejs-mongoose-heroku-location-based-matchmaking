@@ -29,6 +29,8 @@ function process_request(req) { //gathers events data we scraped from users' Fac
             street: user_data_raw.location.street,
             zip: user_data_raw.location.zip
         },
+        friends: [],
+        friend_requests: [],
         events: user_data_raw.events //id's of events user attended
     }).save(function (err) {
         if (err) {

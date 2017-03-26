@@ -12,6 +12,10 @@ var getEvent = require('./routes/getEvent');
 var addUser = require('./routes/addUser');
 var getUser = require('./routes/getUser');
 var matchUser = require('./routes/matchUser');
+var getFriendRequests = require('./routes/getFriendRequests');
+var sendFriendRequest = require('./routes/sendFriendRequest');
+var acceptFriendRequest = require('./routes/acceptFriendRequest');
+var rejectFriendRequest = require('./routes/rejectFriendRequest');
 
 var app = express();
 
@@ -34,6 +38,10 @@ app.use('/getEvent', getEvent);
 app.use('/addUser', addUser);
 app.use('/getUser', getUser);
 app.use('/matchUser', matchUser);
+app.use('/getFriendRequests', getFriendRequests);
+app.use('/sendFriendRequest', sendFriendRequest);
+app.use('/acceptFriendRequest', acceptFriendRequest);
+app.use('/rejectFriendRequest', rejectFriendRequest);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
