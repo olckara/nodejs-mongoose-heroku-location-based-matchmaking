@@ -22,11 +22,7 @@ router.post('/', function (req, res) {
             });
         });
     User.find({
-            facebook_user_id: list_of_users, //find users we've been together which are nearby
-            loc: {
-                '$near': [req.body.latitude, req.body.longitude],
-                '$maxDistance': 1000
-            }
+            facebook_user_id: list_of_users,
         },
         function (err, users) {
             var userMap;
