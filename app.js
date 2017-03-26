@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongo = require('mongodb');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -12,6 +11,7 @@ var addEvent = require('./routes/addEvent');
 var getEvent = require('./routes/getEvent');
 var addUser = require('./routes/addUser');
 var getUser = require('./routes/getUser');
+var matchUser = require('./routes/matchUser');
 
 var app = express();
 
@@ -33,6 +33,7 @@ app.use('/addEvent', addEvent);
 app.use('/getEvent', getEvent);
 app.use('/addUser', addUser);
 app.use('/getUser', getUser);
+app.use('/matchUser', matchUser);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
