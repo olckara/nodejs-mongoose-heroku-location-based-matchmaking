@@ -7,7 +7,17 @@ var Event = require('../Event');
 
 /* This returns nearby events when app sends current long,lat from device GPS */
 router.post('/', function (req, res) {
-    Event.find({loc: {'$near': [req.body.latitude, req.body.longitude], '$maxDistance': 1000}}, function (err, events) {
+    /*Event.find({loc: {'$near': [req.body.latitude, req.body.longitude], '$maxDistance': 1000}}, function (err, events) {
+        var eventMap = {};
+        if ("length" in events) {
+            events.forEach(function (event) {
+                eventMap[event._id] = event;
+            });
+        }
+
+        res.send(eventMap);
+    });*/
+    Event.find({}, function (err, events) {
         var eventMap = {};
         if ("length" in events) {
             events.forEach(function (event) {
