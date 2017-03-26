@@ -21,18 +21,15 @@ router.post('/', function (req, res) {
                 list_of_users.concat(users); //collecting data of every user we've been attended same event
             });
         });
-    var result = User.find({
-            $match: {
-                facebook_user_id: list_of_users, //find users we've been together which are nearby
-                loc: {
-                    '$near': [req.body.latitude, req.body.longitude],
-                    '$maxDistance': 1000
-                }
+    User.find({
+            facebook_user_id: list_of_users, //find users we've been together which are nearby
+            loc: {
+                '$near': [req.body.latitude, req.body.longitude],
+                '$maxDistance': 1000
             }
-        },
-        {$unwind: "$events"},
-        {$project: {_id: 0, title: "$events"}});
-    res.send(JSON.stringify(result))
+        }).toArray(function(error, documents) {
+        if (error) throw error;
+        res.send(documents)});
 });
 
 module.exports = router;
