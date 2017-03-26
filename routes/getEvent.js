@@ -17,11 +17,12 @@ router.post('/', function (req, res) {
 
      res.send(eventMap);
      });*/
-    Event.find({}, function (err, events) {
+    Event.find({}, function (err, events) { //returns all events for demo
         var eventMap = {};
         if ("length" in events) {
+            var i = 0;
             events.forEach(function (event) {
-                eventMap[event._id] = event;
+                eventMap[i++] = event;
             });
         }
         res.send(eventMap);
