@@ -32,9 +32,9 @@ router.post('/', function (req, res) {
             var userMap = {};
             if("length" in users)
                 users.forEach(function (user) {
-                    userMap[user._id] = user;
+                    userMap.push(user);
                 });
-            else userMap[user._id] = users;
+            else userMap.push(users);
             res.send(userMap);
         });
 });
