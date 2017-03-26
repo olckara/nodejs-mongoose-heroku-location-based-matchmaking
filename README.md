@@ -3,11 +3,11 @@
 [logo]: https://github.com/olciniz/bucketapp-getirbitaksihackathon-backend/blob/master/bucket-logo.png "Logo Title Text 2"
 # Bucket
 -----
-Bucket is a mobile-ready, user-oriented event organizer app built for both IOS, Android and Web.
+Bucket is a mobile-ready, user-oriented friend finder app based on common events built for both Android for now.
 
-  - Answer questions
+  - See events around you on a map
 
-  - Set your interests
+  - Find firends nearby to join you!
  
   - Get the best event with the best people
 
@@ -17,12 +17,11 @@ Bucket is a mobile-ready, user-oriented event organizer app built for both IOS, 
 
   - Matches you with the same people as you for events
 
-  - Creates rooms for each events and let you chat on app for arrangement of event details
+  - Creates new friendships
 
 You can also:
-  - Use in-app chat to communicate without sharing your number to others 
   
-  - Buy tickets and make reservations via app
+  - View events all araound the globe
   
   - Use **BiTaksi**  at the beginning and the end of the events easily
 
@@ -30,9 +29,6 @@ You can also:
 -----
 Bucket uses a number of open source projects to work properly:
 
-* [AngularJS] - HTML enhanced for web apps!
 * [node.js] - evented I/O for the backend
-* [MongoDB] - 
-* [Cache] - 
-* [Android] - 
-* [IOS] - 
+* [MongoDB] - mongooseJS
+* [Android] - Android Studio
