@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var User = require('../User');
+var User = require('../entities/User');
 
 /* This adds user to the database as soon as they sign up */
 router.post('/', function (req, res) {

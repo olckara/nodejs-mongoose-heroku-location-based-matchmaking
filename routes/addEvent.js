@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var Event = require('../Event');
+var Event = require('../entities/Event');
 
 /* This adds events user attended to our database as soon as they sign up */
 router.post('/', function (req, res) {

@@ -3,8 +3,8 @@
  */
 var express = require('express');
 var router = express.Router();
-var User = require('../User');
-var Event = require('../Event');
+var User = require('../entities/User');
+var Event = require('../entities/Event');
 
 /* Request returns nearby users when app sends current long,lat from device GPS */
 router.post('/', function (req, res) {

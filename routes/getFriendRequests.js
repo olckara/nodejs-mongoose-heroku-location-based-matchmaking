@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var User = require('../User');
+var User = require('../entities/User');
 
 /* Gets all friend request user have been taken */
 router.post('/', function (req, res) {

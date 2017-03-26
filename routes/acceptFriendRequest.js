@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var User = require('../User');
+var User = require('../entities/User');
 
 /* sends friend request to another user to go to an event together */
 router.post('/', function (req, res) {
