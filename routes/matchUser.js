@@ -30,9 +30,11 @@ router.post('/', function (req, res) {
         },
         function (err, users) {
             var userMap = {};
-            users.forEach(function (user) {
-                userMap[user._id] = user;
-            });
+            if("length" in users)
+                users.forEach(function (user) {
+                    userMap[user._id] = user;
+                });
+            else userMap[user._id] = users;
             res.send(userMap);
         });
 });
